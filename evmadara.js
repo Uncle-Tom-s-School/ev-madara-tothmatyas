@@ -40,13 +40,14 @@ evmadara[2015] = "búbos banka";
 function frissit(){
     var ev = document.getElementById('ev').value;
     evszam.innerHTML = ev;
-    madar.innerHTML = evmadara[ev];
+    madar.innerHTML = nagyKezdo(evmadara[ev]);
 }
 
 function nagyKezdo(szoveg){
-    return szoveg.charAt(0).toUpperCase() + szoveg.slice(1);
+     return szoveg.charAt(0).toUpperCase() + szoveg.slice(1);
 }
 
 function veletlen(){
     ev.value=Math.floor(Math.random() * 36) + 1979;
+    frissit()
 }
